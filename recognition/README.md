@@ -7,12 +7,12 @@
 主要用到了一些简单的 Pytorch 库函数，来代替手写的 for 循环，不让代码看着过于的冗杂。
 
 - 硬件配置
-```commandline
+```
 能开机的电脑
 ```
 
 - 项目环境
-```commandline
+```
 numpy                     1.26.3
 python                    3.9.21
 tqdm  
@@ -20,4 +20,8 @@ tqdm
 
 ## 2>>构建步骤
 
-- 01 >> [数据准备]()
+- 001 >> [数据准备](https://github.com/fangqing408/00-MNIST/edit/master/recognition/001.md)
+- 002 >> [网络参数初始化](https://github.com/fangqing408/00-MNIST/edit/master/recognition/002.md)
+- 003 >> [前向传播](https://github.com/fangqing408/00-MNIST/edit/master/recognition/003.md)
+- 004 >> [反向传播](https://github.com/fangqing408/00-MNIST/edit/master/recognition/004.md)
+- 005 >> [模型保存和预测](https://github.com/fangqing408/00-MNIST/edit/master/recognition/005.md)
