@@ -1,6 +1,6 @@
 # 00-MNIST
 
-## 1>>依赖环境
+## 1 >> 依赖环境
 
 本项目因为是作者手写的 CNN，所以没有用到 GPU，因为本身手写字识别就是一个很简单的分类问题。
 
@@ -18,7 +18,7 @@ python                    3.9.21
 tqdm  
 ```
 
-## 2>>构建步骤
+## 2 >> 构建步骤
 
 - 001 >> [数据准备](https://github.com/fangqing408/00-MNIST/edit/master/recognition/001.md)
 - 002 >> [网络参数初始化](https://github.com/fangqing408/00-MNIST/edit/master/recognition/002.md)
