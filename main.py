@@ -5,7 +5,6 @@ import init
 import forward_pass
 import backward_pass
 import save_model
-
 def train(images, labels, epochs, batch_size, decay, learning_rate, images_test, labels_test):
     conv_kernel1, conv_kernel2, fc_weights, fc_bias = init.init()
     for epoch in range(epochs):
