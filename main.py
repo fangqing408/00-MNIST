@@ -5,8 +5,7 @@ import init
 import forward_pass
 import backward_pass
 import save_model
-from torch.utils.tensorboard import SummaryWriter
-writer = SummaryWriter("logs")
+
 def train(images, labels, epochs, batch_size, decay, learning_rate, images_test, labels_test):
     conv_kernel1, conv_kernel2, fc_weights, fc_bias = init.init()
     for epoch in range(epochs):
@@ -63,16 +62,12 @@ def train(images, labels, epochs, batch_size, decay, learning_rate, images_test,
         accuracy_test = correct_predictions / len(images_test)
         print(f"Average Loss: {avg_loss:.4f}, Accuracy for train: {accuracy_train:.4f}, Accuracy for test: {accuracy_test:.4f}")
         save_model.save_model_to_json(os.path.join('./models', f"model_{epoch}"), conv_kernel1, conv_kernel2, fc_weights, fc_bias)
-        writer.add_scalar("loss", avg_loss, epoch)
-        writer.add_scalar("accuracy_train", accuracy_train, epoch)
-        writer.add_scalar("accuracy_test", accuracy_test, epoch)
-    writer.close()
 if __name__ == "__main__":
     classes = 10
     samples = 2000
     image_size = 28
     paths, images, labels = load_images.load_data('./train', classes, image_size, samples)
-    paths_test, images_test, labels_test = load_images.load_data('./test', classes, image_size, samples)
+    paths_test, images_test, labels_test = load_images.load_data('./test', classes, image_size, samples // 10)
     epochs = 20
     batch_size = 10
     decay = 0.95
