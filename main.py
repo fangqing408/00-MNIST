@@ -68,7 +68,7 @@ if __name__ == "__main__":
     image_size = 28
     paths, images, labels = load_images.load_data('./train', classes, image_size, samples)
     paths_test, images_test, labels_test = load_images.load_data('./test', classes, image_size, samples // 10)
-    epochs = 20
+    epochs = 10
     batch_size = 10
     decay = 0.95
     learning_rate = 0.003
