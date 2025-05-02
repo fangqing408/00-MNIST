@@ -17,6 +17,7 @@
 numpy                     1.24.3
 python                    3.8.18
 pillow                    10.0.1
+matplotlib              	3.7.2	
 ```
 
 ## 2 >> 构建步骤
