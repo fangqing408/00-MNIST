@@ -13,7 +13,7 @@ def predict(image_path, conv_kernel1, conv_kernel2, fc_weights, fc_bias):
     predicted_class = np.argmax(predictions)
     confidence = predictions[predicted_class]
     return predicted_class, confidence
-with open("./models/model_19", 'r') as f:
+with open("./models/model_9", 'r') as f:
     model_params = json.load(f)
     conv_kernel1 = np.array(model_params['conv_kernel1'])
     conv_kernel2 = np.array(model_params['conv_kernel2'])
