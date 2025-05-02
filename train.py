@@ -15,7 +15,7 @@ def train(images, labels, epochs, batch_size, decay, learning_rate, images_test,
         np.random.shuffle(indices)
         total_loss = 0.0
         correct_predictions = 0
-        for i in tqdm(range(0, len(images), batch_size), desc="Training"):
+        for i in tqdm(range(0, len(images), batch_size), desc="Training", ascii=True):
             batch_indices = indices[i:i + batch_size]
             d_kernel1_sum = np.zeros_like(conv_kernel1)
             d_kernel2_sum = np.zeros_like(conv_kernel2)
@@ -49,7 +49,7 @@ def train(images, labels, epochs, batch_size, decay, learning_rate, images_test,
         avg_loss = total_loss / len(images)
         accuracy_train = correct_predictions / len(images)
         correct_predictions = 0
-        for i in tqdm(range(len(images_test)), desc="Testing"):
+        for i in tqdm(range(len(images_test)), desc="Testing", ascii=True):
             image_test = images_test[i]
             label_test = labels_test[i]
             (convolved1, activated1, pooled1, pool_indices1, convolved2, activated2,
